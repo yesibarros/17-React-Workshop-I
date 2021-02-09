@@ -4,7 +4,7 @@ import Sidebar from '../components/Sidebar';
 import Footer from '../components/Footer';
 import Albums from '../components/Albums';
 import SingleAlbum from '../components/SingleAlbum';
-//import audio from '../audio';
+import audio from '../audio';
 
 export default class Main extends React.Component {
   constructor(){
@@ -13,19 +13,19 @@ export default class Main extends React.Component {
       albums: [],
       selectedAlbum: {},
       selectedSong: {},
-      //isPlaying: false,
-      //currentSongList: [],
-      //progress: 0,
+      isPlaying: false,
+      currentSongList: [],
+      progress: 0,
     };
     this.selectAlbum = this.selectAlbum.bind(this);
     this.deselectAlbum = this.deselectAlbum.bind(this);
-    /*
+    
     this.start = this.start.bind(this);
     this.play = this.play.bind(this);
     this.pause = this.pause.bind(this);
     this.next = this.next.bind(this);
     this.previous = this.previous.bind(this);
-    */
+    
   }
   
   componentDidMount() {
@@ -52,7 +52,7 @@ export default class Main extends React.Component {
     this.setState({ selectedAlbum: {} });
   }
 
-  /*
+  
   start(song, songs) {
     this.setState({ selectedSong: song, currentSongList: songs })
     this.loadSong(song.audioUrl);
@@ -97,7 +97,7 @@ export default class Main extends React.Component {
     this.setState({ selectedSong: song })
     this.loadSong(song.audioUrl)
   }
-  */
+  
   render() {
     const  { albums, selectedAlbum, selectedSong, isPlaying, progress } = this.state;
 
@@ -112,13 +112,13 @@ export default class Main extends React.Component {
           }
         </div>
         <Footer 
-          /*selectedSong={selectedSong}
+          selectedSong={selectedSong}
           isPlaying={isPlaying} 
           play={this.play} 
           pause={this.pause}
           next={this.next}
           previous={this.previous}
-          progress={progress}*/
+          progress={progress}
         />
       </div>
     );

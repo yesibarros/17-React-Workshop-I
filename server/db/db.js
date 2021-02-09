@@ -2,8 +2,8 @@
 const path = require('path');
 const chalk = require('chalk');
 const Sequelize = require('sequelize');
-//const DATABASE_URI = require(path.join(__dirname, '../env')).DATABASE_URI;
-const DATABASE_URI = "postgres://postgres@localhost:5432/juke"
+const DATABASE_URI = require(path.join(__dirname, '../env')).DATABASE_URI;
+// const DATABASE_URI = "postgres://postgres@localhost:5432/juke"
 console.log(chalk.yellow('\nOpening connection to PostgreSQL'));
 
 // create the database instance
